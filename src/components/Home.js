@@ -11,13 +11,15 @@ class Home extends React.Component {
           <img className="header" src={header} alt="header" />
         </div>
         <br />
-        <ReactTypingEffect
-          text="THE PODCAST FOR REAL PEOPLE IN THE ENTERTAINMENT INDUSTRY"
-          className="typingEffect"
-          speed="100"
-          eraseDelay="200000"
-          typingDelay="1500"
-        />
+        
+          <ReactTypingEffect
+            text="THE PODCAST FOR REAL PEOPLE IN THE ENTERTAINMENT INDUSTRY."
+            className="typingEffect"
+            speed="100"
+            eraseDelay="200000"
+            typingDelay="1500"
+          />
+        
         </section>
       </>
     );

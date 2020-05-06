@@ -1,13 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+
 body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  color: black;
-  font-weight: 200px;
+  font-family: "Open Sans", sans-serif;
 }
 
 img.header {
-  max-height: 350px;
+  max-height: 300px;
   display: flex;
   justify-content: center;
   margin: 0;
@@ -28,4 +26,35 @@ img.header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  .typingEffect {
+    margin: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+  }
+}
+
+.aboutSection {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .aboutContainer {
+    display: flex;
+    justify-content: center;
+    .aboutText,
+    .aboutImage {
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 25px;
+      margin: 20px;
+      padding: 0;
+      max-width: 500px;
+      box-sizing: border-box;
+      color: black;
+      font-weight: 200px;
+    }
+  }
 }
