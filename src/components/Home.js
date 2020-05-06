@@ -12,7 +12,7 @@ class Home extends React.Component {
         </div>
         <br />
         <ReactTypingEffect
-          text="THE PODCAST FOR REAL PEOPLE IN THE ENTERTAINMENT INDUSTRY."
+          text="THE PODCAST FOR REAL PEOPLE IN THE ENTERTAINMENT INDUSTRY"
           className="typingEffect"
           speed="100"
           eraseDelay="200000"
