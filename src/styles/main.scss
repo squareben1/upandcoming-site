@@ -114,3 +114,43 @@ img.header {
     }
   }
 }
+
+.epSection {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .epTitle {
+    margin: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .epContainer {
+    display: flex;
+    justify-content: center;
+    .epText,
+    .epImage {
+      text-align: justify;
+      text-justify: inter-word;
+      font-size: 25px;
+      margin: 20px;
+      padding: 0;
+      max-width: 500px;
+      box-sizing: border-box;
+      color: black;
+      font-weight: 200px;
+    }
+  }
+  .directories {
+    display: flex;
+    align-items: center;
+    .directoryIcon {
+      padding: 5px;
+      height: 35px;
+      width: 35px;
+    }
+  }
+}

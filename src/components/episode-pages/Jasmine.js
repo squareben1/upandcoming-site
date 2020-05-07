@@ -7,12 +7,13 @@ class JamineEpisode extends React.Component {
   render() {
     return (
       <>
-        <section className="episodeSection" id="episodeSection">
-          <div className="episodeContainer">
-            <div className="episodeImage">
+        <section className="epSection" id="epSection">
+          <div className="epTitle">EPISODE 1 - JASMINE JOBSON</div>
+          <div className="epContainer">
+            <div className="epImage">
               <img className="jasmine" src={jasmine} alt="jasmine" />
             </div>
-            <div className="episodeText">
+            <div className="epText">
               Jasmine Jobson is a break through young actress recently featured
               in Top Boy and, with feature films on the way, Jasmine sat down
               with Sam to discuss the ups and downs of growing up in foster
