@@ -15,7 +15,7 @@ class Home extends React.Component {
           <ReactTypingEffect
             text="THE PODCAST FOR REAL PEOPLE IN THE ENTERTAINMENT INDUSTRY."
             className="typingEffect"
-            speed="65"
+            speed="45"
             eraseDelay="200000"
             typingDelay="1500"
           />

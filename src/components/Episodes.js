@@ -36,34 +36,33 @@ const Episodes = () => {
         <h2>Episodes</h2>
         <div className="episodesContainer" {...bind()}>
           <animated.div className="card" style={{ ...style }}>
-            <h3>Episode 1 - Jasmine Jobson</h3>
             <img src={jasmine} alt="jasmine" />
+            <h3>Episode 1 - Jasmine Jobson</h3>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
-            <h3>Episode 2 - Sophie Kennedy Clark</h3>
             <img src={SKC} alt="SKC" />
+            <h3>Episode 2 - Sophie Kennedy Clark</h3>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
-            <h3>Episode 3 - Stuart Worden</h3>
             <img src={stuart} alt="stuart" />
+            <h3>Episode 3 - Stuart Worden</h3>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
-            <h3>Episode 4 - Niamh Morrison</h3>
             <img src={niamh} alt="niamh" />
+            <h3>Episode 4 - Niamh Morrison</h3>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
-            <h3>Episode 5 - Alan Jones</h3>
             <img src={alan} alt="alan" />
+            <h3>Episode 5 - Alan Jones</h3>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
-            <h3>Episode 6 - Jake Davies</h3>
             <img src={jake} alt="jake" />
+            <h3>Episode 6 - Jake Davies</h3>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
-            <h3>Episode 7 - Percelle Ascot</h3>
             <img src={percelle} alt="percelle" />
+            <h3>Episode 7 - Percelle Ascot</h3>
           </animated.div>
-
         </div>
       </section>
     </>
@@ -71,11 +70,6 @@ const Episodes = () => {
 };
 
 export default Episodes;
-
-
-
-
-
 
 
 
