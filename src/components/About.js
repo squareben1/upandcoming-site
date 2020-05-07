@@ -1,5 +1,4 @@
 import React from "react";
-// import { FaPodcast } from 'react-icons/fa'
 import { FaSpotify, FaPodcast } from "react-icons/fa";
 import host from "../assets/host.jpg";
 
