@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import { animated, useSpring } from "react-spring";
 import { useScroll } from "react-use-gesture";
+import { FaSpotify, FaPodcast } from "react-icons/fa";
 
 import alan from "../assets/alan.jpg";
 import jake from "../assets/jake.jpg";
@@ -36,8 +38,14 @@ const Episodes = () => {
         <h2>Episodes</h2>
         <div className="episodesContainer" {...bind()}>
           <animated.div className="card" style={{ ...style }}>
-            <img src={jasmine} alt="jasmine" />
+            <Link to="/episode1">
+              <img src={jasmine} alt="jasmine" />
+            </Link>
             <h3>Episode 1 - Jasmine Jobson</h3>
+            <div className="episodeDirectories">
+              <FaPodcast className="episodeIcon" />
+              <FaSpotify className="episodeIcon" />
+            </div>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
             <img src={SKC} alt="SKC" />
@@ -70,14 +78,3 @@ const Episodes = () => {
 };
 
 export default Episodes;
-
-
-
-
-
-
-
-
-
-
-
