@@ -13,7 +13,7 @@ class JamineEpisode extends React.Component {
             <div className="epImage">
               <img className="jasmine" src={jasmine} alt="jasmine" />
             </div>
-            
+
             <div className="epText">
               Jasmine Jobson is a break through young actress recently featured
               in Top Boy and, with feature films on the way, Jasmine sat down
@@ -29,6 +29,7 @@ class JamineEpisode extends React.Component {
               Other Television credits include, Susie Moon in Pan Tau (Calgari
               Films), Jigga in Five By Five (BBC), Sally Watkins in Dark Heart.
             </div>
+            {/* Update this text (use JD's, maybe add text running under both sections */}
           </div>
 
           <div className="directories">

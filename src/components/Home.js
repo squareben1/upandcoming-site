@@ -17,7 +17,7 @@ class Home extends React.Component {
           <img className="header" src={header} alt="header" />
         </div>
         <br />
-        
+        {/* lose typing affect, too long - find other */}
           <ReactTypingEffect
             text="THE PODCAST FOR REAL PEOPLE IN THE ENTERTAINMENT INDUSTRY."
             className="typingEffect"

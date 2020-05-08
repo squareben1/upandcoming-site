@@ -37,6 +37,7 @@ const Episodes = () => {
 
   return (
     <>
+    {/* get rid of the scroll bar */}
       <section className="episodesSection" id="episodes">
         <h2>Episodes</h2>
         <div className="episodesContainer" {...bind()}>
