@@ -1,8 +1,14 @@
 import React from "react";
+import { IoIosArrowDown } from "react-icons/io"
 import header from "../assets/header.png";
 import ReactTypingEffect from "react-typing-effect";
 
 class Home extends React.Component {
+
+  handleClick = () => {
+    this.nextComponent.scrollIntoView({ behavior: "smooth" })
+  }
+
   render() {
     return (
       <>
@@ -19,8 +25,9 @@ class Home extends React.Component {
             eraseDelay="200000"
             typingDelay="1500"
           />
-        
+        <IoIosArrowDown onClick={this.handleClick} className="nextSection" />
         </section>
+        <div ref={(ref) => this.nextComponent = ref}></div>
       </>
     );
   }

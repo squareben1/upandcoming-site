@@ -1,8 +1,14 @@
 import React from "react";
+import { IoIosArrowDown } from "react-icons/io"
 import { FaSpotify, FaPodcast } from "react-icons/fa";
 import host from "../assets/host.jpg";
 
 class About extends React.Component {
+
+  handleClick = () => {
+    this.nextComponent.scrollIntoView({ behavior: "smooth" })
+  }
+
   render() {
     return (
       <>
@@ -33,7 +39,9 @@ class About extends React.Component {
           <FaSpotify className="directoryIcon" />
           <p>Spotify</p>
         </div>
+        <IoIosArrowDown onClick={this.handleClick} className="nextSection" />
         </section>
+        <div ref={(ref) => this.nextComponent = ref}></div>
         </>
     );
   }
