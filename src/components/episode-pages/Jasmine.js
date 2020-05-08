@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSpotify, FaPodcast } from "react-icons/fa";
+import { FaSpotify, FaPodcast, FaTwitter, FaInstagram } from "react-icons/fa";
 import jasmine from "../../assets/jasmine.jpg";
 
 class JamineEpisode extends React.Component {
@@ -13,6 +13,7 @@ class JamineEpisode extends React.Component {
             <div className="epImage">
               <img className="jasmine" src={jasmine} alt="jasmine" />
             </div>
+            
             <div className="epText">
               Jasmine Jobson is a break through young actress recently featured
               in Top Boy and, with feature films on the way, Jasmine sat down
@@ -33,10 +34,14 @@ class JamineEpisode extends React.Component {
           <div className="directories">
             <FaPodcast className="directoryIcon" />
             <p>Apple Podcasts</p>
-          </div>
-          <div className="directories">
             <FaSpotify className="directoryIcon" />
             <p>Spotify</p>
+          </div>
+          <div className="socials">
+            <FaTwitter className="directoryIcon" />
+            <p>@jobson_jasmine</p>
+            <FaInstagram className="directoryIcon" />
+            <p>@jasminejobson</p>
           </div>
         </section>
       </>

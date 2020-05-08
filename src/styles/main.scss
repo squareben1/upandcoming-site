@@ -147,6 +147,17 @@ img.header {
   .directories {
     display: flex;
     align-items: center;
+    // flex-direction: column;
+    .directoryIcon {
+      padding: 5px;
+      height: 35px;
+      width: 35px;
+    }
+  }
+
+  .socials {
+    display: flex;
+    align-items: center;
     .directoryIcon {
       padding: 5px;
       height: 35px;
