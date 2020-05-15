@@ -1,9 +1,12 @@
-import React from "react";
+import React, { Component } from "react";
 import { FaSpotify, FaPodcast, FaTwitter, FaInstagram } from "react-icons/fa";
-import jasmine from "../../assets/jasmine.jpg";
+import jasminePic from "../../assets/jasmine.jpg";
 
-class JamineEpisode extends React.Component {
+class EpisodePage extends Component {
   state = {};
+  // constructor(props) {
+    
+  // }
   render() {
     return (
       <>
@@ -12,7 +15,7 @@ class JamineEpisode extends React.Component {
           <div className="epContainer">
             {/* embed episode?  */}
             <div className="epImage">
-              <img className="jasmine" src={jasmine} alt="jasmine" />
+              <img className="jasmine" src={jasminePic} alt="jasmine" />
             </div>
 
             <div className="epText">
@@ -52,4 +55,4 @@ class JamineEpisode extends React.Component {
   }
 }
 
-export default JamineEpisode;
+export default EpisodePage;
