@@ -10,6 +10,7 @@ class JamineEpisode extends React.Component {
         <section className="epSection" id="epSection">
           <div className="epTitle">EPISODE 1 - JASMINE JOBSON</div>
           <div className="epContainer">
+            {/* embed episode?  */}
             <div className="epImage">
               <img className="jasmine" src={jasmine} alt="jasmine" />
             </div>
@@ -44,6 +45,7 @@ class JamineEpisode extends React.Component {
             <FaInstagram className="directoryIcon" />
             <p>@jasminejobson</p>
           </div>
+          {/* add link back UP to episodes */}
         </section>
       </>
     );

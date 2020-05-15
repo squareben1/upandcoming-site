@@ -12,6 +12,7 @@ class About extends React.Component {
     return (
       <>
         <section className="aboutSection" id="aboutSection">
+          <h1>ABOUT</h1>
           <div className="aboutContainer">
             <div className="aboutImage">
               <img className="host" src={host} alt="host" />

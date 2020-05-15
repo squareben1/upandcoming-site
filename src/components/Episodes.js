@@ -20,8 +20,6 @@ const clamp = (value, clampAt) => {
   }
 };
 
-
-
 const Episodes = () => {
 
   const [style, set] = useSpring(() => ({
@@ -39,7 +37,7 @@ const Episodes = () => {
     <>
     {/* get rid of the scroll bar */}
       <section className="episodesSection" id="episodes">
-        <h2>Episodes</h2>
+        <h1>EPISODES</h1>
         <div className="episodesContainer" {...bind()}>
           <animated.div className="card" style={{ ...style }}>
             <Link to="/episode1">
