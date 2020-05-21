@@ -1,21 +1,21 @@
 import React, { Component } from "react";
 import { FaSpotify, FaPodcast, FaTwitter, FaInstagram } from "react-icons/fa";
-import jasminePic from "../../assets/jasmine.jpg";
+// import jasminePic from "../../assets/jasmine.jpg";
 
-class EpisodePage extends Component {
-  state = {};
+const EpisodePage = (props) => {
+  // state = {};
   // constructor(props) {
-    
+
   // }
-  render() {
+  // render() {
     return (
       <>
         <section className="epSection" id="epSection">
-          <div className="epTitle">EPISODE 1 - JASMINE JOBSON</div>
+    <div className="epTitle">EPISODE {props.epNum} - {props.name}</div>
           <div className="epContainer">
             {/* embed episode?  */}
             <div className="epImage">
-              <img className="jasmine" src={jasminePic} alt="jasmine" />
+              <img className="jasmine" src={props.pic} alt="jasmine" />
             </div>
 
             <div className="epText">
@@ -52,7 +52,7 @@ class EpisodePage extends Component {
         </section>
       </>
     );
-  }
+  // }
 }
 
 export default EpisodePage;

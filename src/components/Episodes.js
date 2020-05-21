@@ -3,7 +3,6 @@ import { Link } from "react-router-dom"
 import { animated, useSpring } from "react-spring";
 import { useScroll } from "react-use-gesture";
 import { FaSpotify, FaPodcast } from "react-icons/fa";
-
 import alan from "../assets/alan.jpg";
 import jake from "../assets/jake.jpg";
 import jasmine from "../assets/jasmine.jpg";
@@ -11,6 +10,8 @@ import niamh from "../assets/niamh.jpg";
 import percelle from "../assets/percelle.jpg";
 import SKC from "../assets/SKC.jpg";
 import stuart from "../assets/stuart.jpg";
+
+
 
 const clamp = (value, clampAt) => {
   if (value > 0) {
@@ -21,6 +22,10 @@ const clamp = (value, clampAt) => {
 };
 
 const Episodes = () => {
+  const handleClick = (name) => {
+    console.log('click')
+    // this.nextComponent.scrollIntoView({ behavior: "smooth" });
+  };
 
   const [style, set] = useSpring(() => ({
     transform: "perspective(600px) rotateY(0deg)",
@@ -40,6 +45,7 @@ const Episodes = () => {
         <h1>EPISODES</h1>
         <div className="episodesContainer" {...bind()}>
           <animated.div className="card" style={{ ...style }}>
+            {/* <img src={jasmine} alt="jasmine" onClick={handleClick} /> */}
             <Link to="/episode1">
               <img src={jasmine} alt="jasmine" />
             </Link>
