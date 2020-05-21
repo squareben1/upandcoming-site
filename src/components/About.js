@@ -18,7 +18,7 @@ class About extends React.Component {
               <img className="host" src={host} alt="host" />
             </div>
             <div className="aboutText">
-              {/* ADD 'not just A-listers, etc */}
+              {/* text: ADD 'not just A-listers, etc */}
               Tune in to the new Podcast from young actor Sam Gittins (Await
               Further Instructions, Ray & Liz) for an in-depth conversation with
               a different industry insider every week.

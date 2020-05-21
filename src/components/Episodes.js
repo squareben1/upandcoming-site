@@ -22,11 +22,6 @@ const clamp = (value, clampAt) => {
 };
 
 const Episodes = () => {
-  const handleClick = (name) => {
-    console.log('click')
-    // this.nextComponent.scrollIntoView({ behavior: "smooth" });
-  };
-
   const [style, set] = useSpring(() => ({
     transform: "perspective(600px) rotateY(0deg)",
   }));
@@ -45,14 +40,14 @@ const Episodes = () => {
         <h1>EPISODES</h1>
         <div className="episodesContainer" {...bind()}>
           <animated.div className="card" style={{ ...style }}>
-            {/* <img src={jasmine} alt="jasmine" onClick={handleClick} /> */}
-            <Link to="/episode1">
+            <Link to="episode1">
               <img src={jasmine} alt="jasmine" />
             </Link>
             <h3>Episode 1 - Jasmine Jobson</h3>
             <div className="episodeDirectories">
               <FaPodcast className="episodeIcon" />
               <FaSpotify className="episodeIcon" />
+              {/* do we want these icons here? if so need to do links */}
             </div>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>

@@ -1,58 +1,53 @@
 import React, { Component } from "react";
 import { FaSpotify, FaPodcast, FaTwitter, FaInstagram } from "react-icons/fa";
-// import jasminePic from "../../assets/jasmine.jpg";
+import { Link } from "react-router-dom";
 
 const EpisodePage = (props) => {
-  // state = {};
-  // constructor(props) {
+  const handleLinkClick = (url) => {
+    window.open(url, "_blank");
+    // this.nextComponent.scrollIntoView({ behavior: "smooth" });
+  };
 
+  const handleAppleClick = () => {
+    handleLinkClick(props.appleUrl)
+  };
+
+  const handleSpotifyClick = () => {
+    handleLinkClick(props.spotifyUrl)
+  };
+
+  return (
+    <>
+      <section className="epSection" id="epSection">
+        <div className="epTitle">
+          EPISODE {props.epNum} - {props.name}
+        </div>
+        <div className="epContainer">
+          {/* embed episode?  */}
+          <div className="epImage">
+            <img className="jasmine" src={props.pic} alt="jasmine" />
+            {/* do we need className & alt on above line? */}
+          </div>
+          <div className="epText">{props.text}</div>
+        </div>
+        <div className="directories">
+            <FaPodcast className="directoryIcon" onClick={handleAppleClick}/>
+            {/* add hover over animation to all icons */}
+          <p>Apple Podcasts</p>
+          <FaSpotify className="directoryIcon" onClick={handleSpotifyClick}/>
+          <p>Spotify</p>
+        </div>
+        <div className="socials">
+          <FaTwitter className="directoryIcon" />
+          <p>{props.twitter}</p>
+          <FaInstagram className="directoryIcon" />
+          <p>{props.instagram}</p>
+        </div>
+        {/* add link back UP to episodes */}
+      </section>
+    </>
+  );
   // }
-  // render() {
-    return (
-      <>
-        <section className="epSection" id="epSection">
-    <div className="epTitle">EPISODE {props.epNum} - {props.name}</div>
-          <div className="epContainer">
-            {/* embed episode?  */}
-            <div className="epImage">
-              <img className="jasmine" src={props.pic} alt="jasmine" />
-            </div>
-
-            <div className="epText">
-              Jasmine Jobson is a break through young actress recently featured
-              in Top Boy and, with feature films on the way, Jasmine sat down
-              with Sam to discuss the ups and downs of growing up in foster
-              care, her discovery of acting as a tool to support struggling
-              young people and her own jump onto our screens... Jasmine's
-              training has been through The Big House, a charitable organisation
-              which nurtures young talent who have experiences of the care
-              system, providing them with support and therapy through drama.
-              Jasmine has hit the ground running and has most recently been cast
-              as the next series lead Jaq in TOP BOY for Netflix and has just
-              finished filming opposite Ben Whishaw in the feature film SURGE.
-              Other Television credits include, Susie Moon in Pan Tau (Calgari
-              Films), Jigga in Five By Five (BBC), Sally Watkins in Dark Heart.
-            </div>
-            {/* Update this text (use JD's, maybe add text running under both sections */}
-          </div>
-
-          <div className="directories">
-            <FaPodcast className="directoryIcon" />
-            <p>Apple Podcasts</p>
-            <FaSpotify className="directoryIcon" />
-            <p>Spotify</p>
-          </div>
-          <div className="socials">
-            <FaTwitter className="directoryIcon" />
-            <p>@jobson_jasmine</p>
-            <FaInstagram className="directoryIcon" />
-            <p>@jasminejobson</p>
-          </div>
-          {/* add link back UP to episodes */}
-        </section>
-      </>
-    );
-  // }
-}
+};
 
 export default EpisodePage;
