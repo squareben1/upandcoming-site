@@ -24,10 +24,10 @@ const EpisodePage = (props) => {
         </div>
         <div className="epContainer">
           {/* embed episode?  */}
-          <div className="epImage">
-            <img className="jasmine" src={props.pic} alt="jasmine" />
+          {/* <div className="epImage"> */}
+            <img className="epImage" src={props.pic} alt="jasmine" />
             {/* do we need className & alt on above line? */}
-          </div>
+          {/* </div> */}
           <div className="epText">{props.text}</div>
         </div>
         <div className="directories">
@@ -42,6 +42,7 @@ const EpisodePage = (props) => {
           <p>{props.twitter}</p>
           <FaInstagram className="directoryIcon" />
           <p>{props.instagram}</p>
+          {/* need to show/not show socials if exist/dont */}
         </div>
         {/* add link back UP to episodes */}
       </section>

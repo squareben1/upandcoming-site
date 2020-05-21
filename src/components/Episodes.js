@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 import { animated, useSpring } from "react-spring";
 import { useScroll } from "react-use-gesture";
 import { FaSpotify, FaPodcast } from "react-icons/fa";
@@ -10,8 +10,6 @@ import niamh from "../assets/niamh.jpg";
 import percelle from "../assets/percelle.jpg";
 import SKC from "../assets/SKC.jpg";
 import stuart from "../assets/stuart.jpg";
-
-
 
 const clamp = (value, clampAt) => {
   if (value > 0) {
@@ -35,7 +33,7 @@ const Episodes = () => {
 
   return (
     <>
-    {/* get rid of the scroll bar */}
+      {/* get rid of the scroll bar */}
       <section className="episodesSection" id="episodes">
         <h1>EPISODES</h1>
         <div className="episodesContainer" {...bind()}>
@@ -51,7 +49,9 @@ const Episodes = () => {
             </div>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
-            <img src={SKC} alt="SKC" />
+            <Link to="episode2">
+              <img src={SKC} alt="SKC" />
+            </Link>
             <h3>Episode 2 - Sophie Kennedy Clark</h3>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
