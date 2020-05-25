@@ -13,7 +13,7 @@ import stuart from "../assets/stuart.jpg";
 
 import EpisodePage from "./EpisodePage/EpisodePage";
 
-const Episodes = () => {
+const Episodes = (props) => {
   const clamp = (value, clampAt) => {
     if (value > 0) {
       return value > clampAt ? clampAt : value;
@@ -40,9 +40,9 @@ const Episodes = () => {
         <h1>EPISODES</h1>
         <div className="episodesContainer" {...bind()}>
           <animated.div className="card" style={{ ...style }}>
-            <Link to="episode1">
-              <img src={jasminePic} alt="jasminePic" />
-            </Link>
+            {/* <Link to="episode1"> */}
+              <img src={jasminePic} alt="jasminePic" onClick={props.jasmineHandler} />
+            {/* </Link> */}
             <h3>Episode 1 - Jasmine Jobson</h3>
             <div className="episodeDirectories">
               <FaPodcast className="episodeIcon" />

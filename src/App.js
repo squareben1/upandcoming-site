@@ -110,10 +110,7 @@ class App extends Component {
         <>
           <Home />
           <About />
-          <Episodes />
-          <button onClick={this.showJasmineHandler.bind(this)}>
-            showJasmine
-          </button>
+          <Episodes jasmineHandler={this.showJasmineHandler.bind(this)} />
 
           <Rodal
             width={1800}
