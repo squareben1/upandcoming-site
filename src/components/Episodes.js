@@ -41,7 +41,11 @@ const Episodes = (props) => {
         <div className="episodesContainer" {...bind()}>
           <animated.div className="card" style={{ ...style }}>
             {/* <Link to="episode1"> */}
-              <img src={jasminePic} alt="jasminePic" onClick={props.jasmineHandler} />
+            <img
+              src={jasminePic}
+              alt="jasminePic"
+              onClick={props.jasmineHandler}
+            />
             {/* </Link> */}
             <h3>Episode 1 - Jasmine Jobson</h3>
             <div className="episodeDirectories">
@@ -51,9 +55,9 @@ const Episodes = (props) => {
             </div>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
-            <Link to="episode2">
-              <img src={skcPic} alt="skcPic" />
-            </Link>
+            {/* <Link to="episode2"> */}
+            <img src={skcPic} alt="skcPic" onClick={props.skcHandler} />
+            {/* </Link> */}
             <h3>Episode 2 - Sophie Kennedy Clark</h3>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>

@@ -41,38 +41,61 @@ class App extends Component {
         // {/* Update this text (use JD's, maybe add text running under both sections */}
       },
     ],
+    showModal: false,
     showJasmine: false,
+    showSkc: false
   };
 
   showJasmineHandler = () => {
+    console.log("showJasmineHandler");
     this.setState({
       showJasmine: true,
+      showSkc: false
     });
-    // this.scrollToMyRef();
+    this.showModalHandler();
   };
 
-  hideJasmineHandler = () => {
+  showSkcHandler = () => {
+    console.log("showJasmineHandler");
     this.setState({
       showJasmine: false,
+      showSkc: true
+    });
+    this.showModalHandler();
+  };
+
+  // hideJasmineHandler = () => {
+  //   this.setState({
+  //     showJasmine: false,
+  //   });
+  // };
+
+  showModalHandler = () => {
+    this.setState({
+      showModal: true,
     });
   };
 
-  // scrollToMyRef = () => window.scrollTo(0, this.myRef.offsetTop);
-
-  JasminePage = () => {
-    return (
-      <EpisodePage
-        epNum={this.state.guests[0].epNum}
-        name={this.state.guests[0].name}
-        pic={this.state.guests[0].pic}
-        text={this.state.guests[0].text}
-        twitter={this.state.guests[0].twitter}
-        instagram={this.state.guests[0].instagram}
-        appleUrl={this.state.guests[0].appleUrl}
-        spotifyUrl={this.state.guests[0].spotifyUrl}
-      />
-    );
+  hideModalHandler = () => {
+    this.setState({
+      showModal: false,
+    });
   };
+
+  // JasminePage = () => {
+  //   return (
+  //     <EpisodePage
+  //       epNum={this.state.guests[0].epNum}
+  //       name={this.state.guests[0].name}
+  //       pic={this.state.guests[0].pic}
+  //       text={this.state.guests[0].text}
+  //       twitter={this.state.guests[0].twitter}
+  //       instagram={this.state.guests[0].instagram}
+  //       appleUrl={this.state.guests[0].appleUrl}
+  //       spotifyUrl={this.state.guests[0].spotifyUrl}
+  //     />
+  //   );
+  // };
 
   SkcPage = () => {
     return (
@@ -90,41 +113,60 @@ class App extends Component {
   };
 
   render() {
-    let jasPage = (
-      <div>
-        <EpisodePage
-          epNum={this.state.guests[0].epNum}
-          name={this.state.guests[0].name}
-          pic={this.state.guests[0].pic}
-          text={this.state.guests[0].text}
-          twitter={this.state.guests[0].twitter}
-          instagram={this.state.guests[0].instagram}
-          appleUrl={this.state.guests[0].appleUrl}
-          spotifyUrl={this.state.guests[0].spotifyUrl}
-        />
-      </div>
-    );
+    var guestPage = null;
+
+    if (this.state.showJasmine) {
+      guestPage = (
+        <div>
+          <EpisodePage
+            epNum={this.state.guests[0].epNum}
+            name={this.state.guests[0].name}
+            pic={this.state.guests[0].pic}
+            text={this.state.guests[0].text}
+            twitter={this.state.guests[0].twitter}
+            instagram={this.state.guests[0].instagram}
+            appleUrl={this.state.guests[0].appleUrl}
+            spotifyUrl={this.state.guests[0].spotifyUrl}
+          />
+        </div>
+      );
+    } else if (this.state.showSkc) {
+      guestPage = (
+        <div>
+          <EpisodePage
+            epNum={this.state.guests[1].epNum}
+            name={this.state.guests[1].name}
+            pic={this.state.guests[1].pic}
+            text={this.state.guests[1].text}
+            twitter={this.state.guests[1].twitter}
+            instagram={this.state.guests[1].instagram}
+            appleUrl={this.state.guests[1].appleUrl}
+            spotifyUrl={this.state.guests[1].spotifyUrl}
+          />
+        </div>
+      );
+    }
 
     return (
       <BrowserRouter>
         <>
           <Home />
           <About />
-          <Episodes jasmineHandler={this.showJasmineHandler.bind(this)} />
+          <Episodes jasmineHandler={this.showJasmineHandler.bind(this)} skcHandler={this.showSkcHandler.bind(this)} />
 
           <Rodal
             width={1800}
             height={850}
-            visible={this.state.showJasmine}
-            onClose={this.hideJasmineHandler.bind(this)}
+            visible={this.state.showModal} 
+            onClose={this.hideModalHandler.bind(this)}
           >
-            <div>{jasPage}</div>
+            <div>{guestPage}</div>{" "}
           </Rodal>
 
           {/* <Switch> */}
 
-          <Route exact path="/episode1" component={this.JasminePage} />
-          <Route exact path="/episode2" component={this.SkcPage} />
+          {/* <Route exact path="/episode1" component={this.JasminePage} /> */}
+          {/* <Route exact path="/episode2" component={this.SkcPage} /> */}
           {/* </Switch> */}
         </>
       </BrowserRouter>
