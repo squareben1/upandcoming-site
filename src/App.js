@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/Home";
 import About from "./components/About";
 import Episodes from "./components/Episodes";
-import EpisodePage from "./components/episode-pages/EpisodePage";
+import EpisodePage from "./components/EpisodePage/EpisodePage";
 import jasminePic from "./assets/jasmine.jpg";
 import skcPic from "./assets/SKC.jpg";
 
@@ -42,6 +42,12 @@ class App extends Component {
     showJasmine: false,
   };
 
+  toggleJasmineHandler = () => {
+    this.setState({
+      showJasmine: true,
+    });
+  };
+
   JasminePage = () => {
     return (
       <EpisodePage
@@ -73,14 +79,35 @@ class App extends Component {
   };
 
   render() {
+    let jasPage = null;
+
+    if (this.state.showJasmine) {
+      jasPage = (
+        <div ref='jasPage'>
+          <EpisodePage
+            epNum={this.state.guests[0].epNum}
+            name={this.state.guests[0].name}
+            pic={this.state.guests[0].pic}
+            text={this.state.guests[0].text}
+            twitter={this.state.guests[0].twitter}
+            instagram={this.state.guests[0].instagram}
+            appleUrl={this.state.guests[0].appleUrl}
+            spotifyUrl={this.state.guests[0].spotifyUrl}
+          />
+        </div>
+      );
+    }
+
     return (
       <BrowserRouter>
         <>
           <Home />
           <About />
           <Episodes />
-
+          <button onClick={this.toggleJasmineHandler}>button</button>
+          {jasPage}
           {/* <Switch> */}
+
           <Route exact path="/episode1" component={this.JasminePage} />
           <Route exact path="/episode2" component={this.SkcPage} />
           {/* </Switch> */}

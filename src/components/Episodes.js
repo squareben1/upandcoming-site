@@ -1,25 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { animated, useSpring } from "react-spring";
 import { useScroll } from "react-use-gesture";
 import { FaSpotify, FaPodcast } from "react-icons/fa";
 import alan from "../assets/alan.jpg";
 import jake from "../assets/jake.jpg";
-import jasmine from "../assets/jasmine.jpg";
+import jasminePic from "../assets/jasmine.jpg";
 import niamh from "../assets/niamh.jpg";
 import percelle from "../assets/percelle.jpg";
-import SKC from "../assets/SKC.jpg";
+import skcPic from "../assets/SKC.jpg";
 import stuart from "../assets/stuart.jpg";
 
-const clamp = (value, clampAt) => {
-  if (value > 0) {
-    return value > clampAt ? clampAt : value;
-  } else {
-    return value < -clampAt ? -clampAt : value;
-  }
-};
+import EpisodePage from "./EpisodePage/EpisodePage";
 
 const Episodes = () => {
+  const clamp = (value, clampAt) => {
+    if (value > 0) {
+      return value > clampAt ? clampAt : value;
+    } else {
+      return value < -clampAt ? -clampAt : value;
+    }
+  };
+
   const [style, set] = useSpring(() => ({
     transform: "perspective(600px) rotateY(0deg)",
   }));
@@ -39,7 +41,7 @@ const Episodes = () => {
         <div className="episodesContainer" {...bind()}>
           <animated.div className="card" style={{ ...style }}>
             <Link to="episode1">
-              <img src={jasmine} alt="jasmine" />
+              <img src={jasminePic} alt="jasminePic" />
             </Link>
             <h3>Episode 1 - Jasmine Jobson</h3>
             <div className="episodeDirectories">
@@ -50,7 +52,7 @@ const Episodes = () => {
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
             <Link to="episode2">
-              <img src={SKC} alt="SKC" />
+              <img src={skcPic} alt="skcPic" />
             </Link>
             <h3>Episode 2 - Sophie Kennedy Clark</h3>
           </animated.div>
