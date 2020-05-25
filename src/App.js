@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./styles/main.scss";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Rodal from "rodal";
+import "rodal/lib/rodal.css";
 
 import Home from "./components/Home";
 import About from "./components/About";
@@ -42,11 +44,20 @@ class App extends Component {
     showJasmine: false,
   };
 
-  toggleJasmineHandler = () => {
+  showJasmineHandler = () => {
     this.setState({
       showJasmine: true,
     });
+    // this.scrollToMyRef();
   };
+
+  hideJasmineHandler = () => {
+    this.setState({
+      showJasmine: false,
+    });
+  };
+
+  // scrollToMyRef = () => window.scrollTo(0, this.myRef.offsetTop);
 
   JasminePage = () => {
     return (
@@ -79,24 +90,20 @@ class App extends Component {
   };
 
   render() {
-    let jasPage = null;
-
-    if (this.state.showJasmine) {
-      jasPage = (
-        <div ref='jasPage'>
-          <EpisodePage
-            epNum={this.state.guests[0].epNum}
-            name={this.state.guests[0].name}
-            pic={this.state.guests[0].pic}
-            text={this.state.guests[0].text}
-            twitter={this.state.guests[0].twitter}
-            instagram={this.state.guests[0].instagram}
-            appleUrl={this.state.guests[0].appleUrl}
-            spotifyUrl={this.state.guests[0].spotifyUrl}
-          />
-        </div>
-      );
-    }
+    let jasPage = (
+      <div>
+        <EpisodePage
+          epNum={this.state.guests[0].epNum}
+          name={this.state.guests[0].name}
+          pic={this.state.guests[0].pic}
+          text={this.state.guests[0].text}
+          twitter={this.state.guests[0].twitter}
+          instagram={this.state.guests[0].instagram}
+          appleUrl={this.state.guests[0].appleUrl}
+          spotifyUrl={this.state.guests[0].spotifyUrl}
+        />
+      </div>
+    );
 
     return (
       <BrowserRouter>
@@ -104,8 +111,19 @@ class App extends Component {
           <Home />
           <About />
           <Episodes />
-          <button onClick={this.toggleJasmineHandler}>button</button>
-          {jasPage}
+          <button onClick={this.showJasmineHandler.bind(this)}>
+            showJasmine
+          </button>
+
+          <Rodal
+            width={1800}
+            height={850}
+            visible={this.state.showJasmine}
+            onClose={this.hideJasmineHandler.bind(this)}
+          >
+            <div>{jasPage}</div>
+          </Rodal>
+
           {/* <Switch> */}
 
           <Route exact path="/episode1" component={this.JasminePage} />
