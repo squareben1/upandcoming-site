@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./styles/main.scss";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Rodal from "rodal";
 import "rodal/lib/rodal.css";
 
@@ -43,14 +42,14 @@ class App extends Component {
     ],
     showModal: false,
     showJasmine: false,
-    showSkc: false
+    showSkc: false,
   };
 
   showJasmineHandler = () => {
     console.log("showJasmineHandler");
     this.setState({
       showJasmine: true,
-      showSkc: false
+      showSkc: false,
     });
     this.showModalHandler();
   };
@@ -59,16 +58,10 @@ class App extends Component {
     console.log("showJasmineHandler");
     this.setState({
       showJasmine: false,
-      showSkc: true
+      showSkc: true,
     });
     this.showModalHandler();
   };
-
-  // hideJasmineHandler = () => {
-  //   this.setState({
-  //     showJasmine: false,
-  //   });
-  // };
 
   showModalHandler = () => {
     this.setState({
@@ -82,38 +75,8 @@ class App extends Component {
     });
   };
 
-  // JasminePage = () => {
-  //   return (
-  //     <EpisodePage
-  //       epNum={this.state.guests[0].epNum}
-  //       name={this.state.guests[0].name}
-  //       pic={this.state.guests[0].pic}
-  //       text={this.state.guests[0].text}
-  //       twitter={this.state.guests[0].twitter}
-  //       instagram={this.state.guests[0].instagram}
-  //       appleUrl={this.state.guests[0].appleUrl}
-  //       spotifyUrl={this.state.guests[0].spotifyUrl}
-  //     />
-  //   );
-  // };
-
-  SkcPage = () => {
-    return (
-      <EpisodePage
-        epNum={this.state.guests[1].epNum}
-        name={this.state.guests[1].name}
-        pic={this.state.guests[1].pic}
-        text={this.state.guests[1].text}
-        twitter={this.state.guests[1].twitter}
-        instagram={this.state.guests[1].instagram}
-        appleUrl={this.state.guests[1].appleUrl}
-        spotifyUrl={this.state.guests[1].spotifyUrl}
-      />
-    );
-  };
-
   render() {
-    var guestPage = null;
+    let guestPage = null;
 
     if (this.state.showJasmine) {
       guestPage = (
@@ -148,28 +111,26 @@ class App extends Component {
     }
 
     return (
-      <BrowserRouter>
-        <>
-          <Home />
-          <About />
-          <Episodes jasmineHandler={this.showJasmineHandler.bind(this)} skcHandler={this.showSkcHandler.bind(this)} />
+      <>
+        <Home />
+        <About />
+        <Episodes
+          jasmineHandler={this.showJasmineHandler.bind(this)}
+          skcHandler={this.showSkcHandler.bind(this)}
+        />
 
-          <Rodal
-            width={1800}
-            height={850}
-            visible={this.state.showModal} 
-            onClose={this.hideModalHandler.bind(this)}
-          >
-            <div>{guestPage}</div>{" "}
-          </Rodal>
-
-          {/* <Switch> */}
-
-          {/* <Route exact path="/episode1" component={this.JasminePage} /> */}
-          {/* <Route exact path="/episode2" component={this.SkcPage} /> */}
-          {/* </Switch> */}
-        </>
-      </BrowserRouter>
+        <Rodal
+          width={93}
+          height={95}
+          measure={"%"}
+          visible={this.state.showModal}
+          onClose={this.hideModalHandler.bind(this)}
+        >
+          {/* Is there some way of clicking through the eps once in the modal view? */}
+          <div>{guestPage}</div>{" "}
+          {/* SKC doesn't fit into modal - need to amend modal CSS? And/or SKC/episodePage css */}
+        </Rodal>
+      </>
     );
   }
 }

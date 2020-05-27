@@ -1,5 +1,4 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 import { animated, useSpring } from "react-spring";
 import { useScroll } from "react-use-gesture";
 import { FaSpotify, FaPodcast } from "react-icons/fa";
@@ -10,8 +9,6 @@ import niamh from "../assets/niamh.jpg";
 import percelle from "../assets/percelle.jpg";
 import skcPic from "../assets/SKC.jpg";
 import stuart from "../assets/stuart.jpg";
-
-import EpisodePage from "./EpisodePage/EpisodePage";
 
 const Episodes = (props) => {
   const clamp = (value, clampAt) => {
@@ -35,7 +32,7 @@ const Episodes = (props) => {
 
   return (
     <>
-      {/* get rid of the scroll bar */}
+      {/* get rid of the scroll bar & somehow indicate scroll */}
       <section className="episodesSection" id="episodes">
         <h1>EPISODES</h1>
         <div className="episodesContainer" {...bind()}>

@@ -1,6 +1,5 @@
 import React from "react";
 import { FaSpotify, FaPodcast, FaTwitter, FaInstagram } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 const EpisodePage = (props) => {
   const handleLinkClick = (url) => {
@@ -9,11 +8,11 @@ const EpisodePage = (props) => {
   };
 
   const handleAppleClick = () => {
-    handleLinkClick(props.appleUrl)
+    handleLinkClick(props.appleUrl);
   };
 
   const handleSpotifyClick = () => {
-    handleLinkClick(props.spotifyUrl)
+    handleLinkClick(props.spotifyUrl);
   };
 
   return (
@@ -25,16 +24,16 @@ const EpisodePage = (props) => {
         <div className="epContainer">
           {/* embed episode?  */}
           {/* <div className="epImage"> */}
-            <img className="epImage" src={props.pic} alt="jasmine" />
-            {/* do we need className & alt on above line? */}
+          <img className="epImage" src={props.pic} alt="jasmine" />
+          {/* do we need className & alt on above line? */}
           {/* </div> */}
           <div className="epText">{props.text}</div>
         </div>
         <div className="directories">
-            <FaPodcast className="directoryIcon" onClick={handleAppleClick}/>
-            {/* add hover over animation to all icons */}
+          <FaPodcast className="directoryIcon" onClick={handleAppleClick} />
+          {/* add hover over animation to all icons */}
           <p>Apple Podcasts</p>
-          <FaSpotify className="directoryIcon" onClick={handleSpotifyClick}/>
+          <FaSpotify className="directoryIcon" onClick={handleSpotifyClick} />
           <p>Spotify</p>
         </div>
         <div className="socials">
