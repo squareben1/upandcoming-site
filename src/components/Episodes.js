@@ -37,14 +37,11 @@ const Episodes = (props) => {
         <h1>EPISODES</h1>
         <div className="episodesContainer" {...bind()}>
           <animated.div className="card" style={{ ...style }}>
-            {/* <Link to="episode1"> */}
             <img
               src={jasminePic}
               alt="jasminePic"
-              // onClick={props.jasmineHandler}
               onClick={() => props.guestSelector("Jasmine Jobson")}
             />
-            {/* </Link> */}
             <h3>Episode 1 - Jasmine Jobson</h3>
             <div className="episodeDirectories">
               <FaPodcast className="episodeIcon" />
@@ -54,7 +51,7 @@ const Episodes = (props) => {
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
             {/* <Link to="episode2"> */}
-            <img src={skcPic} alt="skcPic" onClick={props.skcHandler} />
+            <img src={skcPic} alt="skcPic" onClick={() => props.guestSelector("Sophie Kennedy Clark")} />
             {/* </Link> */}
             <h3>Episode 2 - Sophie Kennedy Clark</h3>
           </animated.div>

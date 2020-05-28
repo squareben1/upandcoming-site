@@ -42,24 +42,6 @@ class App extends Component {
     ],
     showModal: false,
     currentGuest: null,
-    showJasmine: false,
-    showSkc: false,
-  };
-
-  showJasmineHandler = () => {
-    this.setState({
-      showJasmine: true,
-      showSkc: false,
-    });
-    this.showModalHandler();
-  };
-
-  showSkcHandler = () => {
-    this.setState({
-      showJasmine: false,
-      showSkc: true,
-    });
-    this.showModalHandler();
   };
 
   showModalHandler = () => {
@@ -103,31 +85,11 @@ class App extends Component {
       );
     }
 
-    //   );
-    // } else if (this.state.showSkc) {
-    //   guestPage = (
-    //     <div>
-    //       <EpisodePage
-    //         epNum={this.state.guests[1].epNum}
-    //         name={this.state.guests[1].name}
-    //         pic={this.state.guests[1].pic}
-    //         text={this.state.guests[1].text}
-    //         twitter={this.state.guests[1].twitter}
-    //         instagram={this.state.guests[1].instagram}
-    //         appleUrl={this.state.guests[1].appleUrl}
-    //         spotifyUrl={this.state.guests[1].spotifyUrl}
-    //       />
-    //     </div>
-    //   );
-    // }
-
     return (
       <>
         <Home />
         <About />
         <Episodes
-          jasmineHandler={this.showJasmineHandler.bind(this)}
-          skcHandler={this.showSkcHandler.bind(this)}
           guestSelector={this.guestSelector.bind(this)}
         />
 
@@ -140,7 +102,6 @@ class App extends Component {
         >
           {/* Is there some way of clicking through the eps once in the modal view? */}
           <div>{guestPage}</div>{" "}
-          {/* SKC doesn't fit into modal - need to amend modal CSS? And/or SKC/episodePage css */}
         </Rodal>
       </>
     );
