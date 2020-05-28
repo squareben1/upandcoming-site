@@ -7,14 +7,6 @@ const EpisodePage = (props) => {
     // this.nextComponent.scrollIntoView({ behavior: "smooth" });
   };
 
-  const handleAppleClick = () => {
-    handleLinkClick(props.appleUrl);
-  };
-
-  const handleSpotifyClick = () => {
-    handleLinkClick(props.spotifyUrl);
-  };
-
   return (
     <>
       <section className="epSection" id="epSection">
@@ -30,10 +22,10 @@ const EpisodePage = (props) => {
           <div className="epText">{props.text}</div>
         </div>
         <div className="directories">
-          <FaPodcast className="directoryIcon" onClick={handleAppleClick} />
+          <FaPodcast className="directoryIcon" onClick={() => handleLinkClick(props.appleUrl)} />
           {/* add hover over animation to all icons */}
           <p>Apple Podcasts</p>
-          <FaSpotify className="directoryIcon" onClick={handleSpotifyClick} />
+          <FaSpotify className="directoryIcon" onClick={() => handleLinkClick(props.spotifyUrl)} />
           <p>Spotify</p>
         </div>
         <div className="socials">
