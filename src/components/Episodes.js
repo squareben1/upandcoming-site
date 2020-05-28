@@ -41,7 +41,8 @@ const Episodes = (props) => {
             <img
               src={jasminePic}
               alt="jasminePic"
-              onClick={props.jasmineHandler}
+              // onClick={props.jasmineHandler}
+              onClick={() => props.guestSelector("Jasmine Jobson")}
             />
             {/* </Link> */}
             <h3>Episode 1 - Jasmine Jobson</h3>

@@ -37,10 +37,11 @@ class App extends Component {
         spotifyUrl: "https://open.spotify.com/episode/1ugROBOVQzg1yzuIxB6q4G",
         text:
           "Sophie Kennedy Clark is a BAFTA winning actress, a producer and writer. Sophie is from Aberdeen, Scotland and is best known for her roles in Philomena, Nymphomaniac Vol. I and Vol. II and she also appeared in the very first episode of Black Mirror (you remember the one…). Sophie has produced and appeared in two upcoming films; Gutterpunks and Sorority - the latter of which happens to feature our very own host. In this episode Sophie and Sam discuss: <ul>Getting into acting and finding an agent</ul> <ul>Some unconventional advice on shooting sex scenes</ul> <ul> Self-starting and forging your own path</ul> <ul>Auditioning and handling rejection </ul> <ul> How to get your nose broken with a BAFTA…</ul> “For any young actor who hasn't gone to drama school it is such a chicken and egg scenario; You can't get an agent without a job and I can't get a job without an agent...” ",
-        // {/* Update this text (use JD's, maybe add text running under both sections */}
+        // {/* Update this text (use JD's, mayb
       },
     ],
     showModal: false,
+    currentGuest: null,
     showJasmine: false,
     showSkc: false,
   };
@@ -73,40 +74,52 @@ class App extends Component {
     });
   };
 
+  guestSelector = (guestName) => {
+    const result = this.state.guests.filter((obj) => obj.name === guestName);
+
+    this.setState({
+      currentGuest: result[0],
+    });
+
+    this.showModalHandler();
+  };
+
   render() {
     let guestPage = null;
-
-    if (this.state.showJasmine) {
+    if (this.state.currentGuest != null) {
       guestPage = (
         <div>
           <EpisodePage
-            epNum={this.state.guests[0].epNum}
-            name={this.state.guests[0].name}
-            pic={this.state.guests[0].pic}
-            text={this.state.guests[0].text}
-            twitter={this.state.guests[0].twitter}
-            instagram={this.state.guests[0].instagram}
-            appleUrl={this.state.guests[0].appleUrl}
-            spotifyUrl={this.state.guests[0].spotifyUrl}
-          />
-        </div>
-      );
-    } else if (this.state.showSkc) {
-      guestPage = (
-        <div>
-          <EpisodePage
-            epNum={this.state.guests[1].epNum}
-            name={this.state.guests[1].name}
-            pic={this.state.guests[1].pic}
-            text={this.state.guests[1].text}
-            twitter={this.state.guests[1].twitter}
-            instagram={this.state.guests[1].instagram}
-            appleUrl={this.state.guests[1].appleUrl}
-            spotifyUrl={this.state.guests[1].spotifyUrl}
+            epNum={this.state.currentGuest.epNum}
+            name={this.state.currentGuest.name}
+            pic={this.state.currentGuest.pic}
+            text={this.state.currentGuest.text}
+            twitter={this.state.currentGuest.twitter}
+            instagram={this.state.currentGuest.instagram}
+            appleUrl={this.state.currentGuest.appleUrl}
+            spotifyUrl={this.state.currentGuest.spotifyUrl}
           />
         </div>
       );
     }
+
+    //   );
+    // } else if (this.state.showSkc) {
+    //   guestPage = (
+    //     <div>
+    //       <EpisodePage
+    //         epNum={this.state.guests[1].epNum}
+    //         name={this.state.guests[1].name}
+    //         pic={this.state.guests[1].pic}
+    //         text={this.state.guests[1].text}
+    //         twitter={this.state.guests[1].twitter}
+    //         instagram={this.state.guests[1].instagram}
+    //         appleUrl={this.state.guests[1].appleUrl}
+    //         spotifyUrl={this.state.guests[1].spotifyUrl}
+    //       />
+    //     </div>
+    //   );
+    // }
 
     return (
       <>
@@ -115,6 +128,7 @@ class App extends Component {
         <Episodes
           jasmineHandler={this.showJasmineHandler.bind(this)}
           skcHandler={this.showSkcHandler.bind(this)}
+          guestSelector={this.guestSelector.bind(this)}
         />
 
         <Rodal
