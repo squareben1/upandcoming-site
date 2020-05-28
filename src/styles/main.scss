@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -131,11 +131,10 @@ img.header {
   .epContainer {
     display: flex;
     justify-content: center;
-    .epText,
-    .epImage {
+    .epText {
       text-align: justify;
       text-justify: inter-word;
-      font-size: 25px;
+      font-size: 22px;
       margin: 20px;
       padding: 0;
       max-width: 30%;
@@ -143,6 +142,12 @@ img.header {
       box-sizing: border-box;
       color: black;
       font-weight: 200px;
+    }
+    .epImage {
+      height: auto;
+      max-height: 600px;
+      width: auto;
+      max-width: 600px;
     }
   }
   .directories {

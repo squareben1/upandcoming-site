@@ -46,7 +46,6 @@ class App extends Component {
   };
 
   showJasmineHandler = () => {
-    console.log("showJasmineHandler");
     this.setState({
       showJasmine: true,
       showSkc: false,
@@ -55,7 +54,6 @@ class App extends Component {
   };
 
   showSkcHandler = () => {
-    console.log("showJasmineHandler");
     this.setState({
       showJasmine: false,
       showSkc: true,
