@@ -60,7 +60,7 @@ const Episodes = (props) => {
             <h3>Episode 3 - Stuart Worden</h3>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>
-            <img src={niamh} alt="niamh" />
+            <img src={niamh} alt="niamh" onClick={() => props.guestSelector("Niamh Morrison")}/>
             <h3>Episode 4 - Niamh Morrison</h3>
           </animated.div>
           <animated.div className="card" style={{ ...style }}>

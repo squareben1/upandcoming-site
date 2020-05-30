@@ -1,6 +1,7 @@
 import jasminePic from "../assets/jasmine.jpg";
 import skcPic from "../assets/SKC.jpg";
 import stuartPic from "../assets/stuart.jpg";
+import niamhPic from "../assets/niamh.jpg";
 
 export default [
   {
@@ -40,5 +41,19 @@ export default [
     spotifyUrl: "https://open.spotify.com/episode/4TM5nn3VxYvSRKLQs7YS76",
     text:
       "Stuart Worden is the Principal of the BRIT School, the leading non-fee paying Performing Arts school in the country, with alumni including Adele, Tom Holland, Katy B, Loyle Carner and  Joivan Wade - as well as our very own host, Sam Gittins: The BRIT School is the leading Performing and Creative Arts school in the UK and completely FREE to attend.  It provides a unique education for over 1,300 pupils aged between 14 and 19 in the fields of music, film, digital design, community arts, visual arts and design, production and performing arts as well as a full academic programme of GCSEs and A Levels.” - from the BRIT Website",
+    // add links to BRIT sites (in body?)
+  },
+  {
+    epNum: "4",
+    name: "Niamh Morrison",
+    pic: niamhPic,
+    twitter: null,
+    instagram: "@niamhmorrisonmakeup",
+    appleUrl:
+      "https://podcasts.apple.com/gb/podcast/episode-4-niamh-morrison-top-hair-make-up-designer-in-tv-film/id1486884781?i=1000458665860",
+    spotifyUrl:
+      "https://open.spotify.com/episode/6O1YrvaEkCx7Ruvl2WulMG?si=7T6JLBxRSo2WjoyitdGIuQ",
+    text:
+      "Niamh Morrison is an eminent hair and make-up designer who has worked in TV and film for years. Niamh’s filmography is extensive (check out her IMDB Profile to see what I mean) and features films like Filth, Valhalla Rising and Bronson. Niamh is well-known for her work in prosthetics and special effect make-up. In addition to working in TV and film Niamh also teaches at the Delamar Academy - the most highly regarded school for make-up and hair courses in the United Kingdom. This experience shines through in this episode as Niamh doles out practical advice for aspiring hair and make-up artists on such topics as starting out, getting your first jobs and the importance of real-world experience.",
   },
 ];
