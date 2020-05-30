@@ -2,13 +2,11 @@ import React, { Component } from "react";
 import "./styles/main.scss";
 import Rodal from "rodal";
 import "rodal/lib/rodal.css";
-import guests from './data/guests.json'
+import guests from './data/guests'
 import Home from "./components/Home";
 import About from "./components/About";
 import Episodes from "./components/Episodes";
 import EpisodePage from "./components/EpisodePage/EpisodePage";
-import jasminePic from "./assets/jasmine.jpg";
-import skcPic from "./assets/SKC.jpg";
 
 class App extends Component {
   state = {
@@ -35,7 +33,6 @@ class App extends Component {
     this.setState({
       currentGuest: result[0],
     });
-    console.log('guests:', this.state.guests)
     this.showModalHandler();
   };
 
