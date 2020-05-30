@@ -16,7 +16,7 @@ const EpisodePage = (props) => {
         <div className="epContainer">
           {/* embed episode?  */}
           {/* <div className="epImage"> */}
-          <img className="epImage" src={props.pic} alt="jasmine" />
+          <img className="epImage" src={props.pic} alt="guestPic" />
           {/* do we need className & alt on above line? */}
           {/* </div> */}
           <div className="epText">{props.text}</div>

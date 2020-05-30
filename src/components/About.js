@@ -41,6 +41,7 @@ class About extends React.Component {
           <div className="directories">
             <FaSpotify className="directoryIcon" />
             <p>Spotify</p>
+            {/* TODO add social icons/links */}
           </div>
           {/* add social links in same format as on indiviual episode pages */}
           <IoIosArrowDown onClick={this.handleClick} className="nextSection" />
