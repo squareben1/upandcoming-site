@@ -48,6 +48,7 @@ class App extends Component {
             text={this.state.currentGuest.text}
             twitter={this.state.currentGuest.twitter}
             instagram={this.state.currentGuest.instagram}
+            website={this.state.currentGuest.website}
             appleUrl={this.state.currentGuest.appleUrl}
             spotifyUrl={this.state.currentGuest.spotifyUrl}
           />

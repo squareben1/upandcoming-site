@@ -1,5 +1,5 @@
 import React from "react";
-import { FaSpotify, FaPodcast, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaSpotify, FaPodcast, FaTwitter, FaInstagram, FaLink } from "react-icons/fa";
 
 const EpisodePage = (props) => {
   const handleLinkClick = (url) => {
@@ -25,6 +25,17 @@ const EpisodePage = (props) => {
       <div className="instagram">
         <FaInstagram className="directoryIcon" />
         <p>{props.instagram}</p>
+      </div>
+    );
+  }
+
+  let website = null;
+
+  if (props.website != null) {
+    website = (
+      <div className="website">
+        <FaLink className="directoryIcon" />
+        <p>{props.website}</p>
       </div>
     );
   }
@@ -60,6 +71,7 @@ const EpisodePage = (props) => {
         <div className="socials">
           <div>{twitter} </div>
           <div>{instagram}</div>
+          <div>{website}</div>
         </div>
         {/* add link back UP to episodes */}
       </section>
