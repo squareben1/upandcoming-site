@@ -7,6 +7,28 @@ const EpisodePage = (props) => {
     // this.nextComponent.scrollIntoView({ behavior: "smooth" });
   };
 
+  let twitter = null;
+
+  if (props.twitter != null) {
+    twitter = (
+      <div className="twitter">
+        <FaTwitter className="directoryIcon" />
+        <p>{props.twitter}</p>
+      </div>
+    );
+  }
+
+  let instagram = null;
+
+  if (props.instagram != null) {
+    twitter = (
+      <div className="instagram">
+        <FaInstagram className="directoryIcon" />
+        <p>{props.instagram}</p>
+      </div>
+    );
+  }
+
   return (
     <>
       <section className="epSection" id="epSection">
@@ -22,18 +44,22 @@ const EpisodePage = (props) => {
           <div className="epText">{props.text}</div>
         </div>
         <div className="directories">
-          <FaPodcast className="directoryIcon" onClick={() => handleLinkClick(props.appleUrl)} />
+          <FaPodcast
+            className="directoryIcon"
+            onClick={() => handleLinkClick(props.appleUrl)}
+          />
           {/* add hover over animation to all icons */}
+
           <p>Apple Podcasts</p>
-          <FaSpotify className="directoryIcon" onClick={() => handleLinkClick(props.spotifyUrl)} />
+          <FaSpotify
+            className="directoryIcon"
+            onClick={() => handleLinkClick(props.spotifyUrl)}
+          />
           <p>Spotify</p>
         </div>
         <div className="socials">
-          <FaTwitter className="directoryIcon" />
-          <p>{props.twitter}</p>
-          <FaInstagram className="directoryIcon" />
-          <p>{props.instagram}</p>
-          {/* need to show/not show socials if exist/dont */}
+          <div>{twitter} </div>
+          <div>{instagram}</div>
         </div>
         {/* add link back UP to episodes */}
       </section>
