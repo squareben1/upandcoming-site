@@ -82,6 +82,9 @@ img.header {
   overflow-x: scroll;
   width: 100%;
   margin-top: 20px;
+  ::-webkit-scrollbar {
+    width: 0px;
+  }
   .card {
     display: flex;
     flex-direction: column;
