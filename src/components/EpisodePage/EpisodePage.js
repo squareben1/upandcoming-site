@@ -1,5 +1,11 @@
 import React from "react";
-import { FaSpotify, FaPodcast, FaTwitter, FaInstagram, FaLink } from "react-icons/fa";
+import {
+  FaSpotify,
+  FaPodcast,
+  FaTwitter,
+  FaInstagram,
+  FaLink,
+} from "react-icons/fa";
 
 const EpisodePage = (props) => {
   const handleLinkClick = (url) => {
@@ -32,10 +38,14 @@ const EpisodePage = (props) => {
   let website = null;
 
   if (props.website != null) {
+    let websiteString = props.website.slice(8, -1)
     website = (
       <div className="website">
-        <FaLink className="directoryIcon" />
-        <p>{props.website}</p>
+        <FaLink
+          className="directoryIcon"
+          onClick={() => handleLinkClick(props.website)}
+        />
+        <p>{websiteString}</p>
       </div>
     );
   }
