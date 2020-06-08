@@ -1,70 +1,40 @@
 # Up & Coming Podcast Website Update #
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Project Management [Trello](https://trello.com/b/KYz5e94b/up-coming-site-build). 
 
-## Available Scripts
+## Software Requirements Specification
 
-In the project directory, you can run:
+### 1. Intro
 
-### `yarn start`
+Rebuild of exisiting Up & Coming [site](https://upandcomingpodcast.co.uk/) to reflect the podcast's straight talking style with modern and clean design. 
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+**1.1 Purpose**
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The original site was built with Square Space. This was fine as a basic site in the hectic run up to launch but now that the show has established itself it is felt that a bespoke website is required. 
 
-### `yarn test`
+The team have therefore decided to dedicate time and resources to the creation of a simple, stylish and functional website that works across platforms.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**1.2 Audience**
 
-### `yarn build`
+Intended audience is current and prospective listeners of the podcast, as well as guests and partners. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**1.3 Scope**
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This will be a relatively simple site from which users can access episodes and information about guests and host as well as contact details. It will also feature a section for media with info and media (logos, images, etc.). 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Features & Requirements
 
-### `yarn eject`
+**Pages**
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Bold landing page (simple with logo)
+- Nav Bar
+- About Section 
+- Overview of Episodes (split into seasons when s2 is available)
+- Individual Show notes pages with guest links & embedded episode
+- Contact page
+- Media kit
+- (NOT MVP: Video Section)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+**Functional Requirements**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+See Project Management [Trello](https://trello.com/b/KYz5e94b/up-coming-site-build). 
