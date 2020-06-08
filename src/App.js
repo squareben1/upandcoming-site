@@ -2,12 +2,13 @@ import React, { Component } from "react";
 import "./styles/main.scss";
 import Rodal from "rodal";
 import "rodal/lib/rodal.css";
-import guests from './data/guests'
+import guests from "./data/guests";
 import Home from "./components/Home";
 import About from "./components/About";
 import Episodes from "./components/Episodes";
 import EpisodePage from "./components/EpisodePage/EpisodePage";
-import NavBar from './components/NavBar'
+import NavBar from "./components/NavBar";
+import Collapsible from "react-collapsible";
 
 class App extends Component {
   state = {
@@ -54,7 +55,6 @@ class App extends Component {
             spotifyUrl={this.state.currentGuest.spotifyUrl}
           />
         </div>
-        // TODO do this automatically 
       );
     }
 
@@ -62,7 +62,16 @@ class App extends Component {
       <>
         <NavBar />
         <Home />
-        <About />
+
+        <Collapsible
+          trigger="Tune in to the new Podcast from young actor Sam Gittins (Await
+              Further Instructions, Ray & Liz) for an in-depth conversation with
+              a different industry insider every week."
+          className="collapse"
+        >
+          <About />
+        </Collapsible>
+
         <Episodes guestSelector={this.guestSelector.bind(this)} />
 
         <Rodal
@@ -71,8 +80,8 @@ class App extends Component {
           measure={"%"}
           visible={this.state.showModal}
           onClose={this.hideModalHandler.bind(this)}
-          enterAnimation={'slideUp'}
-          leaveAnimation={'slideDown'}
+          enterAnimation={"slideUp"}
+          leaveAnimation={"slideDown"}
         >
           {/* Is there some way of clicking through the eps once in the modal view? */}
           <div>{guestPage}</div>{" "}
