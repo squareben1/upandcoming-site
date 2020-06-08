@@ -10,19 +10,21 @@ class NavBar extends React.Component {
           <nav class="navbar">
             <ul>
               <li>
-                <a href="#">About </a>
+                <a href="#">ABOUT</a>
               </li>
               <li>
-                <a href="#">Episodes</a>
+                <a href="#">EPISODES</a>
               </li>
               <li>
-                <a href="#">LOGO</a>
+              <div className="logoContainer">
+            <img className="logoPic" src={header} alt="header" />
+          </div>
               </li>
               <li>
-                <a href="#">Contact</a>
+                <a href="#">CONTACT</a>
               </li>
               <li>
-                <a href="#">Media Kit</a>
+                <a href="#">MEDIA KIT</a>
               </li>
             </ul>
           </nav>
