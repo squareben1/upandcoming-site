@@ -7,6 +7,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Episodes from "./components/Episodes";
 import EpisodePage from "./components/EpisodePage/EpisodePage";
+import NavBar from './components/NavBar'
 
 class App extends Component {
   state = {
@@ -59,6 +60,7 @@ class App extends Component {
 
     return (
       <>
+        <NavBar />
         <Home />
         <About />
         <Episodes guestSelector={this.guestSelector.bind(this)} />

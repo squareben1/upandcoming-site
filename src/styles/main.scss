@@ -76,15 +76,14 @@ img.header {
   align-items: center;
   flex-direction: column;
 }
-
+::-webkit-scrollbar {
+  width: 0px;
+}
 .episodesContainer {
   display: flex;
   overflow-x: scroll;
   width: 100%;
   margin-top: 20px;
-  ::-webkit-scrollbar {
-    width: 0px;
-  }
   .card {
     display: flex;
     flex-direction: column;
