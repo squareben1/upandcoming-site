@@ -7,10 +7,10 @@ class Home extends React.Component {
   handleClick = () => {
     this.nextComponent.scrollIntoView({ behavior: "smooth" });
   };
-
   render() {
     return (
       <>
+      
         <section className="homeSection" id="homeSection">
           <div className="headerContainer">
             <img className="header" src={header} alt="header" />
